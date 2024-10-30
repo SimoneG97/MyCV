@@ -2,18 +2,51 @@
   (text: text, link: link)
 }
 
-#let subSection(title: "", titleEnd: none, subTitle: none, subTitleEnd: none, content: []) = {
-  (title: title, titleEnd: titleEnd, subTitle: subTitle, subTitleEnd: subTitleEnd, content: content)
+#let subSection(
+  title: "",
+  titleEnd: none,
+  subTitle: none,
+  subTitleEnd: none,
+  content: [],
+) = {
+  (
+    title: title,
+    titleEnd: titleEnd,
+    subTitle: subTitle,
+    subTitleEnd: subTitleEnd,
+    content: content,
+  )
 }
 
 #let section(title: "", content: subSection()) = {
   (title: title, content: content)
 }
 
-#let header(title: "", subTitle: "", backgroundColor: none, titleColor: black, subtitleColor: black) = {
+#let header(
+  title: "",
+  subTitle: "",
+  backgroundColor: none,
+  titleColor: black,
+  subtitleColor: black,
+) = {
 
-  let formattedTitle = block(upper(text(2.3em, weight: "bold", titleColor, title, tracking: 0.05em, font: "Glacial Indifference")))
-  let formattedSubtitle = block(upper(text(1.5em, weight: "bold", tracking: 0.05em, rgb("#545454"), subTitle)))
+  let formattedTitle = block(
+    upper(
+      text(
+        2.3em,
+        weight: "bold",
+        titleColor,
+        title,
+        tracking: 0.05em,
+        font: "Glacial Indifference",
+      ),
+    ),
+  )
+  let formattedSubtitle = block(
+    upper(
+      text(1.5em, weight: "bold", tracking: 0.05em, rgb("#545454"), subTitle),
+    ),
+  )
 
   let titleColumn = align(center)[
     #formattedTitle
@@ -21,10 +54,10 @@
   ]
 
   box(
-      width: 1fr,
-      fill: backgroundColor,
-      inset: 20pt,
-      titleColumn,
+    width: 1fr,
+    fill: backgroundColor,
+    inset: 20pt,
+    titleColumn,
   )
 }
 
@@ -37,16 +70,23 @@
   title: none,
   contact: ((text: [], link: "")),
   skills: (
-    languages: ()
+    languages: (),
   ),
-  main: (
-    (title: "", content: [])
-  ),
+  main: ((title: "", content: [])),
   sidebar: (),
-  body) = {
+  body,
+) = {
 
   let backgroundTitle(content) = {
-    align(center, box(fill: headerColor, text(white, size: 1.25em, weight: "bold", upper(content)), width: 1fr, inset: 0.3em))
+    align(
+      center,
+      box(
+        fill: headerColor,
+        text(white, size: 1.25em, weight: "bold", upper(content)),
+        width: 1fr,
+        inset: 0.3em,
+      ),
+    )
   }
 
   let secondaryTitle(content) = {
@@ -58,9 +98,22 @@
   }
 
 
-  let formattedName = block(upper(text(2.3em, weight: "bold", headerColor, name, tracking: 0.05em, font: "Glacial Indifference")))
+  let formattedName = block(
+    upper(
+      text(
+        2.3em,
+        weight: "bold",
+        headerColor,
+        name,
+        tracking: 0.05em,
+        font: "Glacial Indifference",
+      ),
+    ),
+  )
 
-  let formattedTitle = block(upper(text(1.5em, weight: "bold", tracking: 0.05em, rgb("#545454"), title)))
+  let formattedTitle = block(
+    upper(text(1.5em, weight: "bold", tracking: 0.05em, rgb("#545454"), title)),
+  )
 
   let titleColumn = align(center)[
     #formattedName
@@ -68,21 +121,27 @@
   ]
 
   let contactColumn = align(center)[#contact.map(c => {
-    if c.link == none [
-      #c.text\
-    ] else [
-      #underline(link(c.link, text(headerColor, c.text)))\
-    ]
-  }).join()]
+      if c.link == none [
+        #c.text\
+      ] else [
+        #underline(link(c.link, text(headerColor, c.text)))\
+      ]
+    }).join()]
 
   //let header = box(
-   //   width: 1fr,
-    //  fill: headerBackground,
-     // inset: 20pt,
-      //titleColumn,
-//  )
+  //   width: 1fr,
+  //  fill: headerBackground,
+  // inset: 20pt,
+  //titleColumn,
+  //  )
   //header
-  header(title: name, subTitle: title, backgroundColor: headerBackground, titleColor: headerColor, subtitleColor: textColor)
+  header(
+    title: name,
+    subTitle: title,
+    backgroundColor: headerBackground,
+    titleColor: headerColor,
+    subtitleColor: textColor,
+  )
 
   set par(justify: true)
 
@@ -96,50 +155,53 @@
     } else {
       grid(
         columns: (1fr, 1fr),
-        align(start, text(left)),
-        align(end, right),
+        align(start, text(left)), align(end, right),
       )
     }
   }
 
-//  let parseContentList(contentList) = {
-//    if contentList.format == "bulletJoin" [
-//      #text(contentList.content.join(" • "))
-//    ] else if contentList.format == "bulletList" [
-//      #contentList.content.map(c => list(c)).join()
-//    ]
-//  }
+  //  let parseContentList(contentList) = {
+  //    if contentList.format == "bulletJoin" [
+  //      #text(contentList.content.join(" • "))
+  //    ] else if contentList.format == "bulletList" [
+  //      #contentList.content.map(c => list(c)).join()
+  //    ]
+  //  }
 
   let parseSubSections(subSections) = {
-    subSections.map(s => {
-      [
-        #createLeftRight(
-          left: secondaryTitle(s.title),
-          right: if s.titleEnd != none {
-            italicColorTitle(s.titleEnd)
-          }
-        )
-        #if s.subTitle != none or s.subTitleEnd != none [
-          #text(
-            top-edge: 0.2em,
-            createLeftRight(
-              left: italicColorTitle(s.subTitle),
-              right: s.subTitleEnd
-            ),
-          )
-        ]
-        #s.content
-      ]
-    }).join()
+    subSections
+      .map(s => {
+          [
+            #createLeftRight(
+              left: secondaryTitle(s.title),
+              right: if s.titleEnd != none {
+                italicColorTitle(s.titleEnd)
+              },
+            )
+            #if s.subTitle != none or s.subTitleEnd != none [
+              #text(
+                top-edge: 0.2em,
+                createLeftRight(
+                  left: italicColorTitle(s.subTitle),
+                  right: s.subTitleEnd,
+                ),
+              )
+            ]
+            #s.content
+          ]
+        })
+      .join()
   }
 
   let parseSection(section) = {
-    section.map(m => {
-      [
-        #backgroundTitle(m.title)
-        #parseSubSections(m.content)
-      ]
-    }).join()
+    section
+      .map(m => {
+          [
+            #backgroundTitle(m.title)
+            #parseSubSections(m.content)
+          ]
+        })
+      .join()
   }
 
   let mainSection = parseSection(main)
@@ -149,8 +211,7 @@
   grid(
     columns: (1fr, 2fr),
     column-gutter: 1em,
-    sidebarSection,
-    mainSection,
+    sidebarSection, mainSection,
   )
 
   // Main body.

@@ -1,13 +1,11 @@
 #import "template.typ": *
 
-#set page(
-  margin: (
-    left: 0mm,
-    right: 0mm,
-    top: 0mm,
-    bottom: 15mm
-  ),
-)
+#set page(margin: (
+  left: 0mm,
+  right: 0mm,
+  top: 0mm,
+  bottom: 15mm,
+))
 
 #set text(font: "Lato")
 
@@ -18,32 +16,30 @@
   name: "Andrea Maria Piana",
   title: "Team & Technical Lead",
   contact: (
-    contact(
-      text: "+44 741 9845728"
-    ),
+    contact(text: "+44 741 9845728"),
     contact(
       text: "andrea.maria.piana@gmail.com",
-      link: "mailto:andrea.maria.piana@gmail.com"
+      link: "mailto:andrea.maria.piana@gmail.com",
     ),
     contact(
       text: "github.com/cammellos",
-      link: "https://www.github.com/cammellos"
+      link: "https://www.github.com/cammellos",
     ),
   ),
   main: (
     section(
       title: "Profile Summary",
       content: (
-	subSection(
-	  title: "Experienced Engineering Leader with Expertise in
+        subSection(
+          title: "Experienced Engineering Leader with Expertise in
 Decentralized Systems and Full-Stack Development",
-	  content: list(
-	    [Improved web page load time by a factor of *10 times* by using React Virtualized Lazy Loading to render large lists.],
-	    [Spearheaded the implementation and design of embedding images and icons in Splunk Dashboard using React affecting *1000+ users*.],
-	    [Designed and implemented *4 major dialogs* used in Splunk Dashboard.],
-	    ),
-	  ),
-	),
+          content: list(
+            [Improved web page load time by a factor of *10 times* by using React Virtualized Lazy Loading to render large lists.],
+            [Spearheaded the implementation and design of embedding images and icons in Splunk Dashboard using React affecting *1000+ users*.],
+            [Designed and implemented *4 major dialogs* used in Splunk Dashboard.],
+          ),
+        ),
+      ),
     ),
     section(
       title: "Work Experience",
@@ -69,7 +65,7 @@ Decentralized Systems and Full-Stack Development",
             [Improved Experience Monitoring feature with React and Java which actively monitors *4000+ sites* from around the world.],
             [Successfully developed the HTTP Monitoring feature used by *over 100 companies* to monitor their APIs and Websites.],
             [Refined analytics report system generating *1000+ reports daily*.],
-            [Automated internal AWS tasks with Terraform and TeamCity.]
+            [Automated internal AWS tasks with Terraform and TeamCity.],
           ),
         ),
         subSection(
@@ -90,18 +86,18 @@ Decentralized Systems and Full-Stack Development",
       content: (
         subSection(
           title: "Nutri – Nutrition Tracker app",
-          content: list("Engineered and completed a nutrition tracker app in 24 hours using Flutter and Microsoft’s Computer Vision APIs. The app allows one to take picture of their meal and add the nutrition level one ate to their daily intake.")
+          content: list("Engineered and completed a nutrition tracker app in 24 hours using Flutter and Microsoft’s Computer Vision APIs. The app allows one to take picture of their meal and add the nutrition level one ate to their daily intake."),
         ),
         subSection(
           title: "CycSafe Vest",
-          content: list("Formulated a custom vest for bikers that uses Arduino and an accelerometer to produce LED lights on the back using hand gestures.")
+          content: list("Formulated a custom vest for bikers that uses Arduino and an accelerometer to produce LED lights on the back using hand gestures."),
         ),
         subSection(
           title: "Root Checker",
-          content: list([Created a simple ad-free android app using Java and Bash to check if the phone is rooted. It has over 500,000 downloads and has generated *\$2000 in revenue*.])
+          content: list([Created a simple ad-free android app using Java and Bash to check if the phone is rooted. It has over 500,000 downloads and has generated *\$2000 in revenue*.]),
         ),
       ),
-    )
+    ),
   ),
   sidebar: (
     section(
@@ -133,7 +129,7 @@ Decentralized Systems and Full-Stack Development",
             "React",
             "Terraform",
             "Cypress",
-            "Selenium"
+            "Selenium",
           ).join(" • "),
         ),
         subSection(
@@ -170,7 +166,8 @@ Decentralized Systems and Full-Stack Development",
         subSection(
           title: "Project Roots",
           content: list(
-            [Saved over *900,000L* of water], [Generated over *\$6000*],
+            [Saved over *900,000L* of water],
+            [Generated over *\$6000*],
             [Saved consumers over *\$8000*],
           ),
         ),
