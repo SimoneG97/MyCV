@@ -10,8 +10,27 @@
   (title: title, content: content)
 }
 
+#let header(title: "", subTitle: "", backgroundColor: none, titleColor: black, subtitleColor: black) = {
+
+  let formattedTitle = block(upper(text(2.3em, weight: "bold", titleColor, title, tracking: 0.05em, font: "Glacial Indifference")))
+  let formattedSubtitle = block(upper(text(1.5em, weight: "bold", tracking: 0.05em, rgb("#545454"), subTitle)))
+
+  let titleColumn = align(center)[
+    #formattedTitle
+    #formattedSubtitle
+  ]
+
+  box(
+      width: 1fr,
+      fill: backgroundColor,
+      inset: 20pt,
+      titleColumn,
+  )
+}
+
 #let project(
-  theme: rgb("#4273B0"),
+  headerColor: rgb("#4273B0"),
+  textColor: black,
   headerBackground: white,
   name: "",
   email: none,
@@ -27,7 +46,7 @@
   body) = {
 
   let backgroundTitle(content) = {
-    align(center, box(fill: theme, text(white, size: 1.25em, weight: "bold", upper(content)), width: 1fr, inset: 0.3em))
+    align(center, box(fill: headerColor, text(white, size: 1.25em, weight: "bold", upper(content)), width: 1fr, inset: 0.3em))
   }
 
   let secondaryTitle(content) = {
@@ -35,11 +54,11 @@
   }
 
   let italicColorTitle(content) = {
-    text(weight: "bold", style: "italic", size: 1.125em, theme, content)
+    text(weight: "bold", style: "italic", size: 1.125em, headerColor, content)
   }
 
 
-  let formattedName = block(upper(text(2.3em, weight: "bold", theme, name, tracking: 0.05em, font: "Glacial Indifference")))
+  let formattedName = block(upper(text(2.3em, weight: "bold", headerColor, name, tracking: 0.05em, font: "Glacial Indifference")))
 
   let formattedTitle = block(upper(text(1.5em, weight: "bold", tracking: 0.05em, rgb("#545454"), title)))
 
@@ -52,17 +71,18 @@
     if c.link == none [
       #c.text\
     ] else [
-      #underline(link(c.link, text(theme, c.text)))\
+      #underline(link(c.link, text(headerColor, c.text)))\
     ]
   }).join()]
 
-  let header = box(
-      width: 1fr,
-      fill: headerBackground,
-      inset: 20pt,
-      titleColumn,
-  )
-  header
+  //let header = box(
+   //   width: 1fr,
+    //  fill: headerBackground,
+     // inset: 20pt,
+      //titleColumn,
+//  )
+  //header
+  header(title: name, subTitle: title, backgroundColor: headerBackground, titleColor: headerColor, subtitleColor: textColor)
 
   set par(justify: true)
 

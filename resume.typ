@@ -13,7 +13,8 @@
 
 #show: project.with(
   headerBackground: rgb("#dbefff"),
-  theme: rgb("#163853"),
+  headerColor: rgb("#163853"),
+  textColor: rgb("#545454"),
   name: "Andrea Maria Piana",
   title: "Team & Technical Lead",
   contact: (
