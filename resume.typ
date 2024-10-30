@@ -15,15 +15,21 @@
   textColor: rgb("#545454"),
   name: "Andrea Maria Piana",
   title: "Team & Technical Lead",
-  contact: (
-    contact(text: "+44 741 9845728"),
+  contacts: (
+    contact(text: "+44 741 9845728", icon: "phone"),
     contact(
       text: "andrea.maria.piana@gmail.com",
       link: "mailto:andrea.maria.piana@gmail.com",
+      icon: "envelope",
     ),
     contact(
       text: "github.com/cammellos",
       link: "https://www.github.com/cammellos",
+      icon: "github",
+    ),
+    contact(
+      text: "Edinburgh, United Kingdom",
+      icon: "location-dot",
     ),
   ),
   main: (

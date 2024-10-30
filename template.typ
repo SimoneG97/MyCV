@@ -1,5 +1,27 @@
-#let contact(text: "", link: none) = {
-  (text: text, link: link)
+#import "@preview/fontawesome:0.5.0": *
+
+#let contact(text: "", link: none, icon: "") = {
+  (text: text, link: link, icon: icon)
+}
+
+#let contactSection(contacts, iconColor: black, textColor: black) = {
+  contacts
+    .map(c => {
+        let t = text(textColor, c.text)
+
+        if c.link != none {
+          t = link(c.link, t)
+        }
+
+        if c.icon != "" {
+          t = text(
+            text(fa-icon(c.icon, solid: true), baseline: 1pt) + "   " + t,
+            iconColor,
+          )
+        }
+        t
+      })
+    .join("\n")
 }
 
 #let subSection(
@@ -44,7 +66,7 @@
   )
   let formattedSubtitle = block(
     upper(
-      text(1.5em, weight: "bold", tracking: 0.05em, rgb("#545454"), subTitle),
+      text(1.5em, weight: "bold", tracking: 0.05em, subtitleColor, subTitle),
     ),
   )
 
@@ -61,6 +83,27 @@
   )
 }
 
+#let leftColumn(contacts, iconColor: black, textColor: black) = {
+  let sectionHeader = block(
+    text(
+      "CONTACT",
+      iconColor,
+      size: 1.3em,
+      weight: "extrabold",
+      tracking: 0.1em,
+    ),
+  )
+  box(
+    sectionHeader + contactSection(
+      contacts,
+      iconColor: iconColor,
+      textColor: textColor,
+    ),
+    inset: 1.3em,
+    stroke: (right: stroke(thickness: 0.5pt)),
+  )
+}
+
 #let project(
   headerColor: rgb("#4273B0"),
   textColor: black,
@@ -68,7 +111,7 @@
   name: "",
   email: none,
   title: none,
-  contact: ((text: [], link: "")),
+  contacts: (),
   skills: (
     languages: (),
   ),
@@ -120,7 +163,7 @@
     #formattedTitle
   ]
 
-  let contactColumn = align(center)[#contact.map(c => {
+  let contactColumn = align(center)[#contacts.map(c => {
       if c.link == none [
         #c.text\
       ] else [
@@ -128,19 +171,19 @@
       ]
     }).join()]
 
-  //let header = box(
-  //   width: 1fr,
-  //  fill: headerBackground,
-  // inset: 20pt,
-  //titleColumn,
-  //  )
-  //header
   header(
     title: name,
     subTitle: title,
     backgroundColor: headerBackground,
     titleColor: headerColor,
     subtitleColor: textColor,
+  )
+  grid(
+    columns: (1fr, 1fr),
+    align(
+      start,
+      leftColumn(contacts, iconColor: headerColor, textColor: textColor),
+    ),
   )
 
   set par(justify: true)
