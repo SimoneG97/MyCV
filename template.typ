@@ -81,18 +81,23 @@
     .join()
 }
 
-#let parseSection(section, primaryColor: black, secondaryColor: gray) = {
-  pad(
-    top: 1em,
-    section
-      .map(m => {
+#let parseSection(
+  section,
+  primaryColor: black,
+  secondaryColor: gray,
+  breakable: true,
+) = {
+  section
+    .map(m => {
+        block(
+          breakable: breakable,
           [
             #sectionHeader(headerText: m.title, primaryColor: primaryColor)
             #parseSubSections(m.content, secondaryColor: secondaryColor)
-          ]
-        })
-      .join(),
-  )
+          ],
+        )
+      })
+    .join()
 }
 
 #let subSection(
@@ -150,6 +155,7 @@
     width: 1fr,
     fill: backgroundColor,
     inset: 20pt,
+    height: 80pt,
     titleColumn,
   )
 }
@@ -170,9 +176,9 @@
       sidebar,
       primaryColor: primaryColor,
       secondaryColor: secondaryColor,
+      breakable: false,
     ),
-    inset: (left: 1.3em, right: 1.3em, top: 0em, bottom: 1.3em),
-    stroke: (right: stroke(thickness: 0.5pt)),
+    inset: (left: 1.3em, right: 1.3em, top: 0em, bottom: 15pt),
   )
 }
 
@@ -181,7 +187,6 @@
   primaryColor: black,
   secondaryColor: gray,
 ) = {
-  let header = sectionHeader(headerText: "Contact", primaryColor: primaryColor)
   block(
     parseSection(
       main,
@@ -189,7 +194,6 @@
       secondaryColor: secondaryColor,
     ),
     inset: (left: 1.3em, right: 1.3em, top: 0em, bottom: 1.3em),
-    stroke: (right: stroke(thickness: 0.5pt)),
   )
 }
 
