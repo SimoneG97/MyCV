@@ -12,6 +12,7 @@
 
 #let project(
   theme: rgb("#4273B0"),
+  headerBackground: white,
   name: "",
   email: none,
   title: none,
@@ -38,9 +39,9 @@
   }
 
 
-  let formattedName = block(upper(text(2.5em, weight: "bold", theme, name)))
+  let formattedName = block(upper(text(2.3em, weight: "bold", theme, name, tracking: 0.05em, font: "Glacial Indifference")))
 
-  let formattedTitle = block(upper(text(2.25em, gray.darken(50%), title)))
+  let formattedTitle = block(upper(text(1.5em, weight: "bold", tracking: 0.05em, rgb("#545454"), title)))
 
   let titleColumn = align(center)[
     #formattedName
@@ -55,13 +56,14 @@
     ]
   }).join()]
 
-  grid(
-    columns: (1fr, 2fr),
-    column-gutter: 2em,
-    contactColumn,
-    titleColumn,
+  let header = box(
+      width: 1fr,
+      fill: headerBackground,
+      inset: 20pt,
+      titleColumn,
   )
-  
+  header
+
   set par(justify: true)
 
   let formattedLanguageSkills = [
@@ -69,7 +71,7 @@
   ]
 
   let createLeftRight(left: [], right: none) = {
-    if (right == none) { 
+    if (right == none) {
       align(start, text(left))
     } else {
       grid(
@@ -77,7 +79,7 @@
         align(start, text(left)),
         align(end, right),
       )
-    } 
+    }
   }
 
 //  let parseContentList(contentList) = {
@@ -93,7 +95,7 @@
       [
         #createLeftRight(
           left: secondaryTitle(s.title),
-          right: if s.titleEnd != none { 
+          right: if s.titleEnd != none {
             italicColorTitle(s.titleEnd)
           }
         )

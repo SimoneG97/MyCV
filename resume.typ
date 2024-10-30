@@ -2,37 +2,48 @@
 
 #set page(
   margin: (
-    left: 10mm, 
-    right: 10mm, 
-    top: 15mm, 
+    left: 0mm,
+    right: 0mm,
+    top: 0mm,
     bottom: 15mm
   ),
 )
 
-#set text(font: "Mulish")
+#set text(font: "Lato")
 
 #show: project.with(
-  theme: rgb("#0F83C0"),
-  name: "Harkunwar Kochar",
-  title: "Software Engineer",
+  headerBackground: rgb("#dbefff"),
+  theme: rgb("#163853"),
+  name: "Andrea Maria Piana",
+  title: "Team & Technical Lead",
   contact: (
     contact(
-      text: "604-123-4567"
+      text: "+44 741 9845728"
     ),
     contact(
-      text: "hello@example.com", 
-      link: "mailto:hello@example.com"
+      text: "andrea.maria.piana@gmail.com",
+      link: "mailto:andrea.maria.piana@gmail.com"
     ),
     contact(
-      text: "GitHub.com/Harkunwar", 
-      link: "https://www.github.com/Harkunwar"
+      text: "github.com/cammellos",
+      link: "https://www.github.com/cammellos"
     ),
-    contact(
-      text: "www.Harkunwar.com", 
-      link: "https://www.harkunwar.com"
-    )
   ),
   main: (
+    section(
+      title: "Profile Summary",
+      content: (
+	subSection(
+	  title: "Experienced Engineering Leader with Expertise in
+Decentralized Systems and Full-Stack Development",
+	  content: list(
+	    [Improved web page load time by a factor of *10 times* by using React Virtualized Lazy Loading to render large lists.],
+	    [Spearheaded the implementation and design of embedding images and icons in Splunk Dashboard using React affecting *1000+ users*.],
+	    [Designed and implemented *4 major dialogs* used in Splunk Dashboard.],
+	    ),
+	  ),
+	),
+    ),
     section(
       title: "Work Experience",
       content: (
@@ -120,7 +131,7 @@
             "AWS",
             "React",
             "Terraform",
-            "Cypress", 
+            "Cypress",
             "Selenium"
           ).join(" • "),
         ),

@@ -12,6 +12,8 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             typst
+            gnumake
+            entr
           ];
 
           shellHook = ''

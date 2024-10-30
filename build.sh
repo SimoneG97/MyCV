@@ -1,1 +1,2 @@
-typst --font-path ./assets/fonts compile resume.typ resume.pdf "$@"
+#!/usr/bin/env bash
+typst compile --font-path ./assets/fonts resume.typ resume.pdf "$@"
