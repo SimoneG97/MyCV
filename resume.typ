@@ -4,15 +4,15 @@
   left: 0mm,
   right: 0mm,
   top: 0mm,
-  bottom: 15mm,
+  bottom: 0mm,
 ))
 
 #set text(font: "Lato")
 
 #show: project.with(
   headerBackground: rgb("#dbefff"),
-  headerColor: rgb("#163853"),
-  textColor: rgb("#545454"),
+  primaryColor: rgb("#163853"),
+  secondaryColor: rgb("#545454"),
   name: "Andrea Maria Piana",
   title: "Team & Technical Lead",
   contacts: (
@@ -39,11 +39,13 @@
         subSection(
           title: "Experienced Engineering Leader with Expertise in
 Decentralized Systems and Full-Stack Development",
-          content: list(
-            [Improved web page load time by a factor of *10 times* by using React Virtualized Lazy Loading to render large lists.],
-            [Spearheaded the implementation and design of embedding images and icons in Splunk Dashboard using React affecting *1000+ users*.],
-            [Designed and implemented *4 major dialogs* used in Splunk Dashboard.],
-          ),
+          content: text("As a technical leader, I have scaled teams, implemented key infrastructure, and driven product strategy at both technical and organizational levels.
+
+I led agile processes for a team that grew from 6 to 24 developers, running daily standups, coordinating sprints, leading retrospectives, and driving estimation sessions to ensure the team consistently delivered high-impact features. By implementing effective agile practices, I fostered a culture of continuous improvement and transparent communication, enhancing collaboration and alignment with product goals. My hands-on leadership style balanced strategic oversight with active engagement in development, enabling the team to scale efficiently while maintaining high standards of quality and productivity.
+
+I played a key role in developing an in-house communication protocol (Waku), and I designed the encryption mechanism for 1-to-1 and private group chats, adapting Signal’s double ratchet protocol for decentralized peer-to-peer networks. I have improved query performance of our SQL backed stores while using metadata preserving techniques to protect the users’ privacy. I authored key specifications for the application-level protocol and delivered full-stack features aligned with company goals.
+
+I’m skilled at managing senior stakeholder relationships, shaping product roadmaps, and mentoring developers to reach their full potential, ensuring both strategic alignment and technical excellence."),
         ),
       ),
     ),
@@ -51,102 +53,197 @@ Decentralized Systems and Full-Stack Development",
       title: "Work Experience",
       content: (
         subSection(
-          title: "Splunk",
-          titleEnd: "Vancouver, BC",
-          subTitle: "Software Engineer",
-          subTitleEnd: "(June 2021 - Present)",
+          title: "Status.im",
+          titleEnd: "Remote",
+          subTitle: "Team Lead",
+          subTitleEnd: "08/2020-09/2024",
           content: list(
-            [Improved web page load time by a factor of *10 times* by using React Virtualized Lazy Loading to render large lists.],
-            [Spearheaded the implementation and design of embedding images and icons in Splunk Dashboard using React affecting *1000+ users*.],
-            [Designed and implemented *4 major dialogs* used in Splunk Dashboard.],
+            [Scaled the development team from 6 to 24 members, establishing an efficient hiring pipeline for the status-mobile flagship app (chat/wallet/browser), built in react-native for both IOS and Android.],
+            [Provided technical leadership across the mobile frontend (clojurescript/re-frame/react native) and backend (golang), driving architecture and development best practices.],
+            [Contributed to product strategy, offering technical insights on feature development and ensuring alignment with business objectives.],
+            [Managed relationships with external partners and internal cross-functional teams to ensure seamless collaboration.],
+            [Engaged senior stakeholders, supporting the development of the product roadmap and aligning it with broader company strategy.],
+            [Mentored and coached new developers, helping them transition into high-impact roles within the organization.],
+            [Oversaw team performance evaluations, providing feedback and setting development goals.],
+            [Managed team salary and budget allocations, for both new and existing hires.],
+            [Collaborated closely with security auditors, successfully passing two thorough security audits focused on key storage, encryption practices, and overall system security.],
+            [Implemented best practices for secure key management and encryption, ensuring compliance with industry standards.],
           ),
         ),
         subSection(
-          title: "AppNeta",
-          titleEnd: "Vancouver, BC",
-          subTitle: "Full Stack Developer Intern",
-          subTitleEnd: "(September 2019 – May 2020)",
+          title: "Status.im",
+          titleEnd: "Remote",
+          subTitle: "Senior Developer",
+          subTitleEnd: "05/2018 - 08/2020",
           content: list(
-            [Solely responsible for the development of the Web Analytics Dashboard using AWS Lambda and API Gateway in NodeJS.],
-            [Improved Experience Monitoring feature with React and Java which actively monitors *4000+ sites* from around the world.],
-            [Successfully developed the HTTP Monitoring feature used by *over 100 companies* to monitor their APIs and Websites.],
-            [Refined analytics report system generating *1000+ reports daily*.],
-            [Automated internal AWS tasks with Terraform and TeamCity.],
+            [Designed and implemented a custom encryption mechanism for 1-to-1 and private group chats, adapting Signal’s double ratchet protocol to function within a decentralized peer-to-peer system.],
+            [Led the transition of frontend logic to the backend, optimizing system architecture and performance, building and designing an API for the desktop and mobile client.],
+            [Played a pivotal role in developing the in-house communication protocol (waku), contributing to its design and implementation.],
+            [Authored specifications and developed key components of the application-level protocol.],
+            [Delivered full-stack features aligned with company objectives, ensuring seamless integration with business goals.],
+            [Implemented an agnostic decentralized push notification system over the waku protocol, using firebase and APN for the actual delivery of the notifications. https://specs.status.im/raw/16],
+            [Implemented WalletConnect V1 integration in the react native mobile app.],
+            [Written a smart contract in solidity that managed and rewarded/punished node operators of whisper nodes.],
           ),
         ),
         subSection(
-          title: "Better Way Lighting",
-          titleEnd: "Vancouver, BC",
-          subTitle: "Embedded System Developer",
-          subTitleEnd: "(April 2019 – Aug 2020)",
+          title: "Signal AI",
+          titleEnd: "London",
+          subTitle: "Senior Developer",
+          subTitleEnd: "2016-2018",
           content: list(
-            [Spearheaded a Smart LED Mesh System Project for the company.],
-            [Physically designed and programmed an Arduino DMX Controller to automate testing of lighting products.],
-            [Built an interactive Movie Lighting System using the Espressif Framework.],
+            [Utilized AWS services (SQS, Kinesis, ECS, RDS, Redshift) with a large-scale Elasticsearch deployment (~30 TB).],
+            [Wrote and maintained infrastructure using Terraform to manage cloud resources.],
+            [Developed components predominantly in Clojure, with Python for machine learning and node.js APIs.],
+            [Led a team to implement a low-latency distributed data processing pipeline using a microservices architecture, primarily in Clojure with machine learning components in Python.],
+            [Developed a client-facing UI using ClojureScript (re-frame).],
+            [Transitioned from a monolithic data processing pipeline to a re-playable, stream-oriented architecture using microservices.],
           ),
         ),
-      ),
-    ),
-    section(
-      title: "Projects",
-      content: (
         subSection(
-          title: "Nutri – Nutrition Tracker app",
-          content: list("Engineered and completed a nutrition tracker app in 24 hours using Flutter and Microsoft’s Computer Vision APIs. The app allows one to take picture of their meal and add the nutrition level one ate to their daily intake."),
+          title: "Mergermarket",
+          titleEnd: "London",
+          subTitle: "Senior Developer",
+          subTitleEnd: "2015-2016",
+          content: list(
+            [Worked on a client facing real-time notification system for bankruptcy cases, implemented as a collection of microservices witten in Groovy and
+              Java.],
+            [Built a tracking system for financial activists, implemented in node.js and react.],
+          ),
         ),
         subSection(
-          title: "CycSafe Vest",
-          content: list("Formulated a custom vest for bikers that uses Arduino and an accelerometer to produce LED lights on the back using hand gestures."),
-        ),
-        subSection(
-          title: "Root Checker",
-          content: list([Created a simple ad-free android app using Java and Bash to check if the phone is rooted. It has over 500,000 downloads and has generated *\$2000 in revenue*.]),
+          title: "77agency",
+          titleEnd: "London",
+          subTitle: "Lead Developer",
+          subTitleEnd: "2011-2015",
+          content: list(
+            [Led a team of 4 developers in creating the backend and frontend of Allin1social, a Ruby on Rails application, and related services using
+              Sinatra and MySQL.],
+            [Developed a click tracking system with Node.js and MongoDB.],
+            [Allin1social is a Social Media Management tool for Facebook, Twitter, and Google+, which earned the company two Facebook PMD badges: Pages and Insights.],
+          ),
         ),
       ),
     ),
   ),
   sidebar: (
     section(
-      title: "Skills",
+      title: "Technology",
       content: (
         subSection(
-          title: "Languages",
-          content: (
-            "C",
-            "C++",
-            "CSS",
-            "HTML5",
-            "Java",
-            "JavaScript",
-            "Rust",
-            "TypeScript",
-          ).join(" • "),
+          title: "Programming Languages",
+          content: list(
+            "Clojure, ClojureScript, Golang",
+            "Ruby, JavaScript, Node.js",
+            "Python, Java, C",
+          ),
         ),
         subSection(
-          title: "Technologies",
-          content: (
-            "NodeJS",
+          title: "Mobile Development",
+          content: list(
+            "React Native, RN Native Modules",
             "Firebase",
-            "Git",
-            "Flutter",
-            "Express",
-            "Arduino",
-            "AWS",
-            "React",
-            "Terraform",
-            "Cypress",
-            "Selenium",
-          ).join(" • "),
+          ),
         ),
         subSection(
-          title: "concepts",
-          content: (
-            "Object-oriented programming",
-            "Machine Learning",
-            "Unit Tests",
-            "Functional Programming",
-            "Agile Methadology",
-          ).join(" • "),
+          title: "Web Development",
+          content: list(
+            "HTML5, CSS, SCSS/SASS",
+            "Javascript,Coffeescript,Clojurescript",
+            "Re-Frame, React.js, Redux",
+          ),
+        ),
+        subSection(
+          title: "Frameworks",
+          content: list(
+            "Ruby on Rails, Sinatra, Django",
+            "Socket.io, Express.js, Phoenix",
+          ),
+        ),
+        subSection(
+          title: "Databases",
+          content: list(
+            "SQL Databases, MongoDB, Redis, Elasticsearch",
+            "RethinkDB",
+          ),
+        ),
+        subSection(
+          title: "API Integrations",
+          content: list(
+            "Facebook, Vimeo, Youtube, Weibo, Linkedin",
+            "Twitter, Google Analytics, Google AdWords",
+            "Paypal, Mercadopago",
+            "Infura, Cryptocompare, Pokt/Grove",
+          ),
+        ),
+        subSection(
+          title: "Development Tools/Practices",
+          content: list(
+            "Git, TDD, BDD, Scrum, Kanban, XP",
+            "Cucumber, RSpec",
+            "Nix, CircleCI, Jenkins",
+          ),
+        ),
+        subSection(
+          title: "Server Administration",
+          content: list(
+            "ECS, Docker, Terraform",
+            "Linux, FreeBSD, Nginx",
+          ),
+        ),
+        subSection(
+          title: "Cloud Services",
+          content: list("AWS (SQS, Kinesis, ECS, RDS, Redshift)"),
+        ),
+      ),
+    ),
+    section(
+      title: "Leadership Skills",
+      content: (
+        subSection(
+          content: list(
+            text(text(
+              "Strategic Vision:",
+              weight: "bold",
+            ) + "  Shaped product strategy and roadmaps"),
+            text(text(
+              "Technical Guidance:",
+              weight: "bold",
+            ) + "  Provided
+leadership across mobile frontend, backend, and communication protocols."),
+            text(text(
+              "Project Management:",
+              weight: "bold",
+            ) + " Led complex projects, including greenfield and system transitions."),
+            text(text(
+              "Senior Stakeholder Management:",
+              weight: "bold",
+            ) + "  Effectively managed senior stakeholders and their expectations."),
+            text(text(
+              "Team Scaling:",
+              weight: "bold",
+            ) + "  Successfully scaled teams from 6 to 24 and set up hiring pipelines."),
+            text(text(
+              "Cross-Functional Collaboration:",
+              weight: "bold",
+            ) + "  Managed relationships with internal and external stakeholders"),
+            text(text(
+              "Hands-On Leadership:",
+              weight: "bold",
+            ) + "  Balanced team empowerment with direct codebase involvement."),
+            text(text(
+              "Mentorship:",
+              weight: "bold",
+            ) + "  Coached new developers into impactful roles."),
+            text(text(
+              "Innovation:",
+              weight: "bold",
+            ) + "  Spearheaded development and adaptation of key technologies and protocols"),
+            text(text(
+              "Team Engagement and Collaboration:",
+              weight: "bold",
+            ) + "  Fostered team engagement through open communication in 1:1 meetings, and facilitated reflective and productive retrospectives and team meetings."),
+          ),
         ),
       ),
     ),
@@ -156,40 +253,12 @@ Decentralized Systems and Full-Stack Development",
         subSection(
           title: [
             #set par(justify: false)
-            University of British Columbia
+            University of Edinburgh
           ],
-          subTitle: "BSc in Computer Science",
+          subTitle: "BEng in Computer Science",
           content: [
-            Graduated: May 2021\
-            Vancouver, BC
+            Graduated: May 2011\
           ],
-        ),
-      ),
-    ),
-    section(
-      title: "Volunteer",
-      content: (
-        subSection(
-          title: "Project Roots",
-          content: list(
-            [Saved over *900,000L* of water],
-            [Generated over *\$6000*],
-            [Saved consumers over *\$8000*],
-          ),
-        ),
-      ),
-    ),
-    section(
-      title: "Awards",
-      content: (
-        subSection(
-          content: list(
-            [1st Year Computer Science \(BSc\) *Honorable Mention*],
-            [Hellmann’s Best New Enactus Project 2019 *1st Prize*],
-            [Hellmann’s Food Security Challenge 2018 *1st Prize*],
-            [Scotiabank EcoLiving Green Challenge *Regional Champion*],
-            [Scotiabank Environmental Challenge *Regional Champion*],
-          ),
         ),
       ),
     ),

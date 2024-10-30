@@ -4,10 +4,28 @@
   (text: text, link: link, icon: icon)
 }
 
-#let contactSection(contacts, iconColor: black, textColor: black) = {
+#let secondaryTitle(content, secondaryColor: gray) = {
+  text(weight: "bold", size: 1em, secondaryColor, content)
+}
+
+#let sectionHeader(headerText: "", primaryColor: black) = {
+  block(
+    text(
+      upper(headerText),
+      primaryColor,
+      size: 1.3em,
+      weight: "extrabold",
+      tracking: 0.1em,
+    ),
+  )
+}
+
+
+
+#let contactSection(contacts, iconColor: black, secondaryColor: black) = {
   contacts
     .map(c => {
-        let t = text(textColor, c.text)
+        let t = text(secondaryColor, c.text)
 
         if c.link != none {
           t = link(c.link, t)
@@ -22,6 +40,59 @@
         t
       })
     .join("\n")
+}
+
+#let createLeftRight(left: [], right: none, secondaryColor: black) = {
+  if (right == none) {
+    align(start, text(left, secondaryColor))
+  } else {
+    grid(
+      columns: (1fr, 1fr),
+      align(start, text(left, secondaryColor)),
+      align(end, text(right, secondaryColor)),
+    )
+  }
+}
+
+#let parseSubSections(subSections, secondaryColor: gray) = {
+  subSections
+    .map(s => {
+        [
+          #createLeftRight(
+            left: secondaryTitle(s.title, secondaryColor: secondaryColor),
+            right: if s.titleEnd != none {
+              s.titleEnd
+            },
+            secondaryColor: secondaryColor,
+          )
+          #if s.subTitle != none or s.subTitleEnd != none [
+            #text(
+              top-edge: 0.2em,
+              createLeftRight(
+                left: s.subTitle,
+                right: s.subTitleEnd,
+                secondaryColor: secondaryColor,
+              ),
+            )
+          ]
+          #text(s.content, size: 0.9em, secondaryColor)
+        ]
+      })
+    .join()
+}
+
+#let parseSection(section, primaryColor: black, secondaryColor: gray) = {
+  pad(
+    top: 1em,
+    section
+      .map(m => {
+          [
+            #sectionHeader(headerText: m.title, primaryColor: primaryColor)
+            #parseSubSections(m.content, secondaryColor: secondaryColor)
+          ]
+        })
+      .join(),
+  )
 }
 
 #let subSection(
@@ -83,30 +154,50 @@
   )
 }
 
-#let leftColumn(contacts, iconColor: black, textColor: black) = {
-  let sectionHeader = block(
-    text(
-      "CONTACT",
-      iconColor,
-      size: 1.3em,
-      weight: "extrabold",
-      tracking: 0.1em,
-    ),
-  )
-  box(
-    sectionHeader + contactSection(
+#let leftColumn(
+  contacts,
+  sidebar,
+  primaryColor: black,
+  secondaryColor: gray,
+) = {
+  let header = sectionHeader(headerText: "Contact", primaryColor: primaryColor)
+  block(
+    header + contactSection(
       contacts,
-      iconColor: iconColor,
-      textColor: textColor,
+      iconColor: primaryColor,
+      secondaryColor: secondaryColor,
+    ) + parseSection(
+      sidebar,
+      primaryColor: primaryColor,
+      secondaryColor: secondaryColor,
     ),
-    inset: 1.3em,
+    inset: (left: 1.3em, right: 1.3em, top: 0em, bottom: 1.3em),
     stroke: (right: stroke(thickness: 0.5pt)),
   )
 }
 
+#let rightColumn(
+  main,
+  primaryColor: black,
+  secondaryColor: gray,
+) = {
+  let header = sectionHeader(headerText: "Contact", primaryColor: primaryColor)
+  block(
+    parseSection(
+      main,
+      primaryColor: primaryColor,
+      secondaryColor: secondaryColor,
+    ),
+    inset: (left: 1.3em, right: 1.3em, top: 0em, bottom: 1.3em),
+    stroke: (right: stroke(thickness: 0.5pt)),
+  )
+}
+
+
+
 #let project(
-  headerColor: rgb("#4273B0"),
-  textColor: black,
+  primaryColor: rgb("#4273B0"),
+  secondaryColor: black,
   headerBackground: white,
   name: "",
   email: none,
@@ -124,7 +215,7 @@
     align(
       center,
       box(
-        fill: headerColor,
+        fill: primaryColor,
         text(white, size: 1.25em, weight: "bold", upper(content)),
         width: 1fr,
         inset: 0.3em,
@@ -132,130 +223,40 @@
     )
   }
 
-  let secondaryTitle(content) = {
-    text(weight: "bold", size: 1.125em, upper(content))
-  }
-
   let italicColorTitle(content) = {
-    text(weight: "bold", style: "italic", size: 1.125em, headerColor, content)
+    text(weight: "bold", style: "italic", size: 1.125em, primaryColor, content)
   }
-
-
-  let formattedName = block(
-    upper(
-      text(
-        2.3em,
-        weight: "bold",
-        headerColor,
-        name,
-        tracking: 0.05em,
-        font: "Glacial Indifference",
-      ),
-    ),
-  )
-
-  let formattedTitle = block(
-    upper(text(1.5em, weight: "bold", tracking: 0.05em, rgb("#545454"), title)),
-  )
-
-  let titleColumn = align(center)[
-    #formattedName
-    #formattedTitle
-  ]
-
-  let contactColumn = align(center)[#contacts.map(c => {
-      if c.link == none [
-        #c.text\
-      ] else [
-        #underline(link(c.link, text(headerColor, c.text)))\
-      ]
-    }).join()]
 
   header(
     title: name,
     subTitle: title,
     backgroundColor: headerBackground,
-    titleColor: headerColor,
-    subtitleColor: textColor,
+    titleColor: primaryColor,
+    subtitleColor: secondaryColor,
   )
   grid(
-    columns: (1fr, 1fr),
+    columns: (1fr, 2fr),
     align(
       start,
-      leftColumn(contacts, iconColor: headerColor, textColor: textColor),
+      leftColumn(
+        contacts,
+        sidebar,
+        primaryColor: primaryColor,
+        secondaryColor: secondaryColor,
+      ),
+    ),
+    align(
+      start,
+      rightColumn(
+        main,
+        primaryColor: primaryColor,
+        secondaryColor: secondaryColor,
+      ),
     ),
   )
 
   set par(justify: true)
 
-  let formattedLanguageSkills = [
-    #text(skills.languages.join(" • "))
-  ]
-
-  let createLeftRight(left: [], right: none) = {
-    if (right == none) {
-      align(start, text(left))
-    } else {
-      grid(
-        columns: (1fr, 1fr),
-        align(start, text(left)), align(end, right),
-      )
-    }
-  }
-
-  //  let parseContentList(contentList) = {
-  //    if contentList.format == "bulletJoin" [
-  //      #text(contentList.content.join(" • "))
-  //    ] else if contentList.format == "bulletList" [
-  //      #contentList.content.map(c => list(c)).join()
-  //    ]
-  //  }
-
-  let parseSubSections(subSections) = {
-    subSections
-      .map(s => {
-          [
-            #createLeftRight(
-              left: secondaryTitle(s.title),
-              right: if s.titleEnd != none {
-                italicColorTitle(s.titleEnd)
-              },
-            )
-            #if s.subTitle != none or s.subTitleEnd != none [
-              #text(
-                top-edge: 0.2em,
-                createLeftRight(
-                  left: italicColorTitle(s.subTitle),
-                  right: s.subTitleEnd,
-                ),
-              )
-            ]
-            #s.content
-          ]
-        })
-      .join()
-  }
-
-  let parseSection(section) = {
-    section
-      .map(m => {
-          [
-            #backgroundTitle(m.title)
-            #parseSubSections(m.content)
-          ]
-        })
-      .join()
-  }
-
-  let mainSection = parseSection(main)
-  let sidebarSection = parseSection(sidebar)
-
-
-  grid(
-    columns: (1fr, 2fr),
-    column-gutter: 1em,
-    sidebarSection, mainSection,
-  )
 
   // Main body.
   set par(justify: true)
