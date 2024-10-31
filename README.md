@@ -10,7 +10,7 @@ A sleek and professional CV template built with [Typst](https://typst.app/), fea
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgements]#(#acknowledgements)
+- [Acknowledgements](#acknowledgements)
 
 
 ## Installation
@@ -19,11 +19,15 @@ To get started, ensure you have Typst installed. If Typst isn't installed yet, y
 
 1. Clone this repository:
 
+```
    git clone https://github.com/cammellos/typst-blue-header-cv.git
+```
 
 2. Navigate into the project directory:
 
+```
    cd typst-blue-header-cv
+```
 
 There's a `flake.nix` file that you can use, `direnv` should automatically pick it up.
 
@@ -49,13 +53,13 @@ This project includes a Makefile to facilitate building, watching for changes, a
 
 - **build**: Compile the Typst file into a PDF using the specified input YAML file and output path.
 
-``
+```
   make build
 ```
 
 - **watch**: Automatically rebuild the PDF whenever a `.typ` or `.yaml` file changes.
 
-``
+```
   make watch
 ```
 

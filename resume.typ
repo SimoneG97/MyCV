@@ -227,8 +227,6 @@
   )
 }
 
-
-
 #let project(
   name: "",
   email: none,
