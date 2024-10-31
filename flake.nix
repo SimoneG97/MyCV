@@ -11,6 +11,8 @@
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
+            imagemagick
+            ghostscript
             typst
             typstyle
             gnumake

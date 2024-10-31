@@ -1,6 +1,7 @@
 #import "@preview/fontawesome:0.5.0": *
 
-#let info = yaml("./resume.yaml")
+#let filename = sys.inputs.at("filename", default: "./resume.yaml")
+#let info = yaml(filename)
 
 #let vertical_margins = 15pt
 #let horizontal_margin = 15pt
