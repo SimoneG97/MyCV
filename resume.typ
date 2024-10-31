@@ -290,6 +290,27 @@ leadership across mobile frontend, backend, and communication protocols."),
         ),
       ),
     ),
+    section(
+      title: "Languages",
+      content: (
+        subSection(
+          content: list(
+            text(text(
+              "English:",
+              weight: "bold",
+            ) + "  Fluent"),
+            text(text(
+              "Italian:",
+              weight: "bold",
+            ) + "  Native"),
+            text(text(
+              "Polish:",
+              weight: "bold",
+            ) + "  Intermediate"),
+	  ),
+	),
+      ),
+    )
   ),
 )
 
