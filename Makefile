@@ -6,7 +6,7 @@ build:
 
 # Target to watch resume.typ and re-run build
 watch:
-	find . -name '*.typ' | entr -r make build
+	find . -name '*.typ' -o -name 'resume.yaml' | entr -r make build
 
 format:
 	typstyle -i *.typ

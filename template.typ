@@ -1,9 +1,5 @@
 #import "@preview/fontawesome:0.5.0": *
 
-#let contact(text: "", link: none, icon: "") = {
-  (text: text, link: link, icon: icon)
-}
-
 #let secondaryTitle(content, secondaryColor: gray) = {
   text(weight: "bold", size: 1em, secondaryColor, content)
 }
@@ -19,8 +15,6 @@
     ),
   )
 }
-
-
 
 #let contactSection(contacts, iconColor: black, secondaryColor: black) = {
   contacts
@@ -75,7 +69,7 @@
               ),
             )
           ]
-          #text(s.content, size: 0.9em, secondaryColor)
+	  #list(..s.content)
         ]
       })
     .join()
@@ -98,26 +92,6 @@
         )
       })
     .join()
-}
-
-#let subSection(
-  title: "",
-  titleEnd: none,
-  subTitle: none,
-  subTitleEnd: none,
-  content: [],
-) = {
-  (
-    title: title,
-    titleEnd: titleEnd,
-    subTitle: subTitle,
-    subTitleEnd: subTitleEnd,
-    content: content,
-  )
-}
-
-#let section(title: "", content: subSection()) = {
-  (title: title, content: content)
 }
 
 #let header(
@@ -214,23 +188,6 @@
   sidebar: (),
   body,
 ) = {
-
-  let backgroundTitle(content) = {
-    align(
-      center,
-      box(
-        fill: primaryColor,
-        text(white, size: 1.25em, weight: "bold", upper(content)),
-        width: 1fr,
-        inset: 0.3em,
-      ),
-    )
-  }
-
-  let italicColorTitle(content) = {
-    text(weight: "bold", style: "italic", size: 1.125em, primaryColor, content)
-  }
-
   header(
     title: name,
     subTitle: title,
@@ -258,13 +215,4 @@
       ),
     ),
   )
-
-  set par(justify: true)
-
-
-  // Main body.
-  set par(justify: true)
-  show: columns.with(3, gutter: 1.3em)
-
-  // body
 }
