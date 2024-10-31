@@ -54,12 +54,12 @@
         [
           #createLeftRight(
             left: secondaryTitle(s.title, secondaryColor: secondaryColor),
-            right: if s.titleEnd != none {
+            right: if s.at("titleEnd", default: "") != "" {
               s.titleEnd
             },
             secondaryColor: secondaryColor,
           )
-          #if s.subTitle != none or s.subTitleEnd != none [
+          #if s.at("subTitle",  default: "") != "" or s.at("subTitleEnd", default: "") != "" [
             #text(
               top-edge: 0.2em,
               createLeftRight(
