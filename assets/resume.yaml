@@ -1,89 +1,57 @@
-name: Orion Bellamy
+name: Simone Galante
 title: Software Engineer
 colors:
-  background: '#dbefff'
+  background: '#51a9f0'
   primary: '#163853'
   secondary: '#545454'
 contact:
   - icon: phone
-    text: +44 123 4567890
-  - text: orion.bellamy@example.com
-    link: 'mailto:orion.bellamy@example.com'
-    icon: envelope
+    text: +39 327 9188085
+  - icon: envelope
+    text: simoneg.work@gmail.com
+    link: 'mailto:simoneg.work@gmail.com'
   - icon: github
-    text: github.com/orionbellamy
-    link: 'https://www.github.com/orionbellamy'
+    text: github.com/SimoneG97
+    link: 'https://www.github.com/SimoneG97'
   - icon: location-dot
-    text: 'London, United Kingdom'
+    text: 'Italy, Abruzzo, Pescara'
 sidebar:
-  - title: Technology
+  - title: Technologies
     content:
       - title: Programming Languages
         content:
-          - 'Java, Python, JavaScript'
-          - 'C++, Ruby, Go'
-      - title: Mobile Development
-        content:
-          - 'Flutter, React Native'
-          - 'Firebase, REST APIs'
-      - title: Web Development
-        content:
-          - 'HTML5, CSS3, Sass'
-          - 'Angular, React.js'
+          - 'Java, Python'
+          - 'Rust, Scala, C\#'
       - title: Frameworks
         content:
-          - 'Django, Flask, Ruby on Rails'
-          - 'Express.js, Spring Boot'
+          - 'Spring Boot'
+          - 'FastAPI, Flask'
+      - title: Specialized Tecnologies
+        content:
+          - 'ANTLR, Google ORTools (SCIP, GLOP, CPSAT)'
       - title: Databases
         content:
-          - 'PostgreSQL, MySQL, MongoDB'
+          - 'MySQL, MSSQL'
           - 'SQLite'
-      - title: API Integrations
+      - title: Development Tools
         content:
-          - 'Stripe, Twilio, AWS SDK'
-          - 'Google Maps API'
-      - title: Development Tools/Practices
-        content:
-          - 'Git, Docker, CI/CD'
-          - 'Agile, Scrum'
+          - 'Git, Docker'
+          - 'Azure Pipelines, Jenkins'
       - title: Server Administration
         content:
-          - 'Linux, Nginx, Apache'
-          - 'Cloudflare, Heroku'
+          - 'Linux, Nginx'
       - title: Cloud Services
         content:
-          - 'AWS (S3, Lambda, EC2)'
-  - title: Leadership Skills
-    content:
-      - content:
-          - '*Strategic Vision:* Developed and executed software strategies.'
-          - >-
-            *Technical Guidance:* Led teams in adopting new technologies and frameworks.
-          - >-
-            *Project Management:* Managed multiple projects, ensuring timely delivery.
-          - >-
-            *Stakeholder Management:* Built relationships with key stakeholders.
-          - >-
-            *Team Scaling:* Expanded teams while maintaining productivity.
-          - >-
-            *Cross-Functional Collaboration:* Worked across departments for project success.
-          - >-
-            *Hands-On Leadership:* Actively contributed to codebases while leading.
-          - '*Mentorship:* Guided junior developers in their career paths.'
-          - >-
-            *Innovation:* Introduced new tools that improved development processes.
-          - >-
-            *Team Engagement:* Fostered a culture of open communication and feedback.
+          - 'Azure App Service'
   - title: Education
     content:
       - content:
-          - '*BSc in Computer Science* \ University of Technology \ July 2015 \'
+          - 'Graduated in Computer Science \ I.T.I.S. A. Volta \ Luglio 2016'
+          - 'Bachelor''s Degree in Computer Science \ University of L''Aquila \ October 2022'
   - title: Languages
     content:
       - content:
-          - '*English:* Fluent'
-          - '*Spanish:* Intermediate'
-          - '*German:* Basic'
+          - '*English*: Fluent'
 main:
   - title: Profile Summary
     content:
@@ -99,10 +67,24 @@ main:
 
   - title: Work Experience
     content:
-      - title: Tech Innovations
-        title_end: Senior Software Engineer
-        subtitle: Remote
-        subtitle_end: 09/2021 - Present
+      - title: Ready2Use S.r.l.
+        title_end: Software Engineer
+        subtitle: Pescara
+        subtitle_end: 06/2024 - Present
+        content:
+          - >-
+            Developed RESTful APIs and integrated third-party services,
+            streamlining payment processes for clients.
+          - >-
+            Worked on a cross-platform mobile application that achieved over
+            50,000 downloads in its first month.
+          - >-
+            Mentored interns and junior developers, helping them transition into
+            full-time roles.
+      - title: Digitalsoft S.r.l.
+        title_end: OR/Backend Developer
+        subtitle: Pescara
+        subtitle_end: 02/2022 - 06/2024
         content:
           - >-
             Lead a team of engineers in developing a new e-commerce platform
@@ -113,76 +95,3 @@ main:
           - >-
             Collaborated with UX designers to enhance user interfaces and improve
             user satisfaction scores.
-      - title: Code Solutions
-        title_end: Software Engineer
-        subtitle: Remote
-        subtitle_end: 06/2018 - 08/2021
-        content:
-          - >-
-            Developed RESTful APIs and integrated third-party services,
-            streamlining payment processes for clients.
-          - >-
-            Worked on a cross-platform mobile application that achieved over
-            50,000 downloads in its first month.
-          - >-
-            Mentored interns and junior developers, helping them transition into
-            full-time roles.
-      - title: Dev Hub
-        title_end: Junior Developer
-        subtitle: London
-        subtitle_end: 01/2016 - 05/2018
-        content:
-          - >-
-            Assisted in the development of a client management system,
-            leading to a 20% increase in efficiency.
-          - >-
-            Conducted code reviews and contributed to team best practices.
-          - >-
-            Supported debugging and troubleshooting efforts across various
-            projects.
-            vu
-      - title: Code Solutions
-        title_end: Software Engineer
-        subtitle: Remote
-        subtitle_end: 06/2018 - 08/2021
-        content:
-          - >-
-            Developed RESTful APIs and integrated third-party services,
-            streamlining payment processes for clients.
-          - >-
-            Worked on a cross-platform mobile application that achieved over
-            50,000 downloads in its first month.
-          - >-
-            Mentored interns and junior developers, helping them transition into
-            full-time roles.
-      - title: Code Solutions
-        title_end: Software Engineer
-        subtitle: Remote
-        subtitle_end: 06/2018 - 08/2021
-        content:
-          - >-
-            Developed RESTful APIs and integrated third-party services,
-            streamlining payment processes for clients.
-          - >-
-            Worked on a cross-platform mobile application that achieved over
-            50,000 downloads in its first month.
-          - >-
-            Mentored interns and junior developers, helping them transition into
-            full-time roles.
-      - title: Code Solutions
-        title_end: Software Engineer
-        subtitle: Remote
-        subtitle_end: 06/2018 - 08/2021
-        content:
-          - >-
-            Developed RESTful APIs and integrated third-party services,
-            streamlining payment processes for clients.
-          - >-
-            Worked on a cross-platform mobile application that achieved over
-            50,000 downloads in its first month.
-          - >-
-            Mentored interns and junior developers, helping them transition into
-            full-time roles.
-
-
-

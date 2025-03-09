@@ -1,0 +1,187 @@
+name: Orion Bellamy
+title: Software Engineer
+colors:
+  background: '#dbefff'
+  primary: '#163853'
+  secondary: '#545454'
+contact:
+  - icon: phone
+    text: +44 123 4567890
+  - text: orion.bellamy@example.com
+    link: 'mailto:orion.bellamy@example.com'
+    icon: envelope
+  - icon: github
+    text: github.com/orionbellamy
+    link: 'https://www.github.com/orionbellamy'
+  - icon: location-dot
+    text: 'London, United Kingdom'
+sidebar:
+  - title: Technology
+    content:
+      - title: Programming Languages
+        content:
+          - 'Java, Python, JavaScript'
+          - 'C++, Ruby, Go'
+      - title: Mobile Development
+        content:
+          - 'Flutter, React Native'
+          - 'Firebase, REST APIs'
+      - title: Web Development
+        content:
+          - 'HTML5, CSS3, Sass'
+          - 'Angular, React.js'
+      - title: Frameworks
+        content:
+          - 'Django, Flask, Ruby on Rails'
+          - 'Express.js, Spring Boot'
+      - title: Databases
+        content:
+          - 'PostgreSQL, MySQL, MongoDB'
+          - 'SQLite'
+      - title: API Integrations
+        content:
+          - 'Stripe, Twilio, AWS SDK'
+          - 'Google Maps API'
+      - title: Development Tools/Practices
+        content:
+          - 'Git, Docker, CI/CD'
+          - 'Agile, Scrum'
+      - title: Server Administration
+        content:
+          - 'Linux, Nginx, Apache'
+          - 'Cloudflare, Heroku'
+      - title: Cloud Services
+        content:
+          - 'AWS (S3, Lambda, EC2)'
+  - title: Leadership Skills
+    content:
+      - content:
+          - '*Strategic Vision:* Developed and executed software strategies.'
+          - >-
+            *Technical Guidance:* Led teams in adopting new technologies and frameworks.
+          - >-
+            *Project Management:* Managed multiple projects, ensuring timely delivery.
+          - >-
+            *Stakeholder Management:* Built relationships with key stakeholders.
+          - >-
+            *Team Scaling:* Expanded teams while maintaining productivity.
+          - >-
+            *Cross-Functional Collaboration:* Worked across departments for project success.
+          - >-
+            *Hands-On Leadership:* Actively contributed to codebases while leading.
+          - '*Mentorship:* Guided junior developers in their career paths.'
+          - >-
+            *Innovation:* Introduced new tools that improved development processes.
+          - >-
+            *Team Engagement:* Fostered a culture of open communication and feedback.
+  - title: Education
+    content:
+      - content:
+          - '*BSc in Computer Science* \ University of Technology \ July 2015 \'
+  - title: Languages
+    content:
+      - content:
+          - '*English:* Fluent'
+          - '*Spanish:* Intermediate'
+          - '*German:* Basic'
+main:
+  - title: Profile Summary
+    content:
+      - title: >-
+          Dynamic software engineer with extensive experience in full-stack development
+        description: >
+          I have a strong background in building scalable web and mobile applications,
+          with a focus on user experience and performance optimization.
+
+          Throughout my career, I have effectively collaborated with cross-functional teams to deliver high-quality software solutions. My expertise lies in full-stack development, where I leverage various technologies to create impactful products. I am passionate about mentoring junior developers and fostering an inclusive team environment that encourages growth and innovation.
+
+          With a solid understanding of cloud services, I ensure that the applications I build are not only robust but also cost-effective and efficient.
+
+  - title: Work Experience
+    content:
+      - title: Tech Innovations
+        title_end: Senior Software Engineer
+        subtitle: Remote
+        subtitle_end: 09/2021 - Present
+        content:
+          - >-
+            Lead a team of engineers in developing a new e-commerce platform
+            using React and Node.js, improving performance by 30%.
+          - >-
+            Implemented CI/CD pipelines using GitHub Actions, reducing deployment
+            times significantly.
+          - >-
+            Collaborated with UX designers to enhance user interfaces and improve
+            user satisfaction scores.
+      - title: Code Solutions
+        title_end: Software Engineer
+        subtitle: Remote
+        subtitle_end: 06/2018 - 08/2021
+        content:
+          - >-
+            Developed RESTful APIs and integrated third-party services,
+            streamlining payment processes for clients.
+          - >-
+            Worked on a cross-platform mobile application that achieved over
+            50,000 downloads in its first month.
+          - >-
+            Mentored interns and junior developers, helping them transition into
+            full-time roles.
+      - title: Dev Hub
+        title_end: Junior Developer
+        subtitle: London
+        subtitle_end: 01/2016 - 05/2018
+        content:
+          - >-
+            Assisted in the development of a client management system,
+            leading to a 20% increase in efficiency.
+          - >-
+            Conducted code reviews and contributed to team best practices.
+          - >-
+            Supported debugging and troubleshooting efforts across various
+            projects.
+            vu
+      - title: Code Solutions
+        title_end: Software Engineer
+        subtitle: Remote
+        subtitle_end: 06/2018 - 08/2021
+        content:
+          - >-
+            Developed RESTful APIs and integrated third-party services,
+            streamlining payment processes for clients.
+          - >-
+            Worked on a cross-platform mobile application that achieved over
+            50,000 downloads in its first month.
+          - >-
+            Mentored interns and junior developers, helping them transition into
+            full-time roles.
+      - title: Code Solutions
+        title_end: Software Engineer
+        subtitle: Remote
+        subtitle_end: 06/2018 - 08/2021
+        content:
+          - >-
+            Developed RESTful APIs and integrated third-party services,
+            streamlining payment processes for clients.
+          - >-
+            Worked on a cross-platform mobile application that achieved over
+            50,000 downloads in its first month.
+          - >-
+            Mentored interns and junior developers, helping them transition into
+            full-time roles.
+      - title: Code Solutions
+        title_end: Software Engineer
+        subtitle: Remote
+        subtitle_end: 06/2018 - 08/2021
+        content:
+          - >-
+            Developed RESTful APIs and integrated third-party services,
+            streamlining payment processes for clients.
+          - >-
+            Worked on a cross-platform mobile application that achieved over
+            50,000 downloads in its first month.
+          - >-
+            Mentored interns and junior developers, helping them transition into
+            full-time roles.
+
+
