@@ -51,19 +51,20 @@ sidebar:
   - title: Languages
     content:
       - content:
+          - '*Italian*: Native language'
           - '*English*: Fluent'
 main:
   - title: Profile Summary
     content:
       - title: >-
-          Dynamic software engineer with extensive experience in full-stack development
+          Software engineer with experience in backend development
         description: >
-          I have a strong background in building scalable web and mobile applications,
-          with a focus on user experience and performance optimization.
+          I have a good background in building backend applications, especially focusing on performance optimizations.
 
-          Throughout my career, I have effectively collaborated with cross-functional teams to deliver high-quality software solutions. My expertise lies in full-stack development, where I leverage various technologies to create impactful products. I am passionate about mentoring junior developers and fostering an inclusive team environment that encourages growth and innovation.
+          Throughout the projects I've worked on, I've have used specialized technologies, like OPC-UA for IoT, ANTLR for developing a DSL and OR-Tools for IP/LP problems. 
 
-          With a solid understanding of cloud services, I ensure that the applications I build are not only robust but also cost-effective and efficient.
+          I have used Python and Java for big projects, but have also used Scala and C# on smaller side projects.
+          I also used Rust for personal small projects and would love to try programming with it for work.
 
   - title: Work Experience
     content:
