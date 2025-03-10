@@ -60,11 +60,13 @@ main:
           Software engineer with experience in backend development
         description: >
           I have a good background in building backend applications, especially focusing on performance optimizations.
+          All projects I've worked were setup to be Docker-friendly. \
 
-          Throughout the projects I've worked on, I've have used specialized technologies, like OPC-UA for IoT, ANTLR for developing a DSL and OR-Tools for IP/LP problems. 
+          Throughout the projects I've worked on, I've have used specialized technologies, like OPC-UA for IIoT, ANTLR
+          to designing a DSL and OR-Tools for IP/LP problems. \
 
-          I have used Python and Java for big projects, but have also used Scala and C# on smaller side projects.
-          I also used Rust for personal small projects and would love to try programming with it for work.
+          I have used Python and Java for big projects, Scala and C\# on smaller side-projects and Rust
+          for personal projects and would love to try programming with it for work.
 
   - title: Work Experience
     content:
@@ -74,25 +76,27 @@ main:
         subtitle_end: 06/2024 - Present
         content:
           - >-
-            Developed RESTful APIs and integrated third-party services,
-            streamlining payment processes for clients.
+            Developed RESTful APIs and integrated third-party services like Camunda 7, while
+            also developing a DSL to integrate in Camunda forms to inject validation / assertions.
           - >-
-            Worked on a cross-platform mobile application that achieved over
-            50,000 downloads in its first month.
+            Worked on setting up a Linux machine to have an internal development / testing environment
+            which isn't local, to also check difficult-to-setup behaviours.
+            (e.g. Reverse Proxy, SSL, Docker Compose with mounts over storage, etc..)
           - >-
-            Mentored interns and junior developers, helping them transition into
-            full-time roles.
+            Created a Jenkins pipeline which builds a Docker image that contains a project, extracts
+            it's build and makes scan through Mend CLI
       - title: Digitalsoft S.r.l.
         title_end: OR/Backend Developer
         subtitle: Pescara
         subtitle_end: 02/2022 - 06/2024
         content:
           - >-
-            Lead a team of engineers in developing a new e-commerce platform
-            using React and Node.js, improving performance by 30%.
+            Developed a MSSQL DB comparator with a "diff"-able report.
           - >-
-            Implemented CI/CD pipelines using GitHub Actions, reducing deployment
-            times significantly.
+            Developed / enhanced OPC-UA connector for IIOT connections.
           - >-
-            Collaborated with UX designers to enhance user interfaces and improve
-            user satisfaction scores.
+            Enhanced / bug fixing on already existing projects.
+          - >-
+            Developed IP/LP model and solver which enabled/disables contraints based on user preferences.
+          - >-
+            Developed CP model and solver which solves small problem instance with also block zones constraints.
