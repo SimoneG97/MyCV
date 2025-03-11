@@ -77,7 +77,8 @@ main:
         content:
           - >-
             Developed RESTful APIs and integrated third-party services like Camunda 7, while
-            also developing a DSL to integrate in Camunda forms to inject validation / assertions.
+            also designing a DSL to integrate in Camunda forms to inject validation / assertions
+            and integrating validation in the already existing APIs.
           - >-
             Worked on setting up a Linux machine to have an internal development / testing environment
             which isn't local, to also check difficult-to-setup behaviours.
