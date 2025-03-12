@@ -15,6 +15,8 @@ contact:
     link: 'https://www.github.com/SimoneG97'
   - icon: location-dot
     text: 'Italy, Abruzzo, Pescara'
+  - icon: calendar
+    text: 'Birthday: 14/04/1997'
 sidebar:
   - title: Technologies
     content:
@@ -28,7 +30,8 @@ sidebar:
           - 'FastAPI, Flask'
       - title: Specialized Tecnologies
         content:
-          - 'ANTLR, Google ORTools (SCIP, GLOP, CPSAT)'
+          - 'ANTLR'
+          - 'Google ORTools (SCIP, GLOP, CP-SAT)'
       - title: Databases
         content:
           - 'MySQL, MSSQL'
@@ -46,13 +49,13 @@ sidebar:
   - title: Education
     content:
       - content:
-          - 'Graduated in Computer Science \ I.T.I.S. A. Volta \ Luglio 2016'
-          - 'Bachelor''s Degree in Computer Science \ University of L''Aquila \ October 2022'
+          - '*Bachelor''s Degree in Computer Science* \ University of L''Aquila \ October 2022'
+          - '*Graduated in Computer Science* \ I.T.I.S. A. Volta \ Luglio 2016'
   - title: Languages
     content:
       - content:
           - '*Italian*: Native language'
-          - '*English*: Fluent'
+          - '*English*: Fluent (B2)'
 main:
   - title: Profile Summary
     content:
